@@ -10,18 +10,32 @@
 <body>
     <div>
         <div class="container">
-            <div class="card" id="left">Hello</div>
-            <div class="card" id="center">Hello</div>
-            <div class="card" id="right">Hello</div>
-            <a class="nav" id="lnav">&lt;</a>
-            <a class="nav" id="rnav">&gt;</a>
+            <div id="card-container">
+                <div class="card">1st Slide</div>
+                <div class="card">2nd Slide</div>
+                <div class="card">3rd Slide</div>
+                <div class="card">4th Slide</div>
+            </div>
+            <a class="nav" id="lnav" onclick="changeSlides(-1)">&lt;</a>
+            <a class="nav" id="rnav" onclick="changeSlides(1)">&gt;</a>
             <div id="dots">
-                <span class="dots"></span>
-                <span class="dots"></span>
-                <span class="dots"></span>
+                <span class="dots" onclick="showSlide(0)"></span>
+                <span class="dots" onclick="showSlide(1)"></span>
+                <span class="dots" onclick="showSlide(2)"></span>
+                <span class="dots" onclick="showSlide(3)"></span>
             </div>
         </div>
         
     </div>
+    <div class="modal">
+        <div class="modalcontent">
+            <span>Enter text to be displayed on slide:</span>
+            <input type="text" name="content" id="contnt" placeholder="Enter slide text here">
+            <button id="subm">Submit</button>
+            <span class="close" onclick="closeModal()">X</span>
+        </div>
+    </div>
+
+    <script src="carousel.js"></script>
 </body>
 </html>
